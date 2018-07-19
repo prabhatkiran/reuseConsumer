@@ -1,0 +1,57 @@
+<mvc:View controllerName="Sample.reuseConsumer.controller.Object" xmlns="sap.uxap" xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:sample="sap.uxap.AnchorBar"
+	height="100%">
+	<ObjectPageLayout id="objectPage" enableLazyLoading="true" useIconTabBar="true" navigate="_onNavigate" showAnchorBar="true"
+		upperCaseAnchorBar="false" editHeaderButtonPress="handleEditBtnPress">
+		<headerTitle>
+			<ObjectPageHeader id="objectId" objectTitle="{CustomerName}" objectSubtitle="{CustomerID}" isObjectIconAlwaysVisible="false"
+				isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true">
+			</ObjectPageHeader>
+		</headerTitle>
+
+		<sections>
+			<ObjectPageSection id="section1" title="{i18n>xtit.sectionInformation}">
+				<subSections>
+					<ObjectPageSubSection title="{i18n>xtit.generalDetails}" id="generalDetailsSubSection">
+						<blocks>
+							<core:ComponentContainer id="objectReusableTabel" propagateModel="true"/>
+						</blocks>
+					</ObjectPageSubSection>
+					
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>
+
+<!--<mvc:View
+	controllerName="Sample.reuseConsumer.controller.Object"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic">
+
+	<semantic:SemanticPage
+		id="page"
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false"
+		busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+
+		<semantic:titleHeading>
+			<Title text="{CustomerID}" />
+		</semantic:titleHeading>
+
+		<semantic:headerContent>
+			<ObjectNumber
+				numberUnit="{Address}"
+			/>
+		</semantic:headerContent>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+
+
+	</semantic:SemanticPage>
+
+</mvc:View>-->
