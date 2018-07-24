@@ -64,8 +64,8 @@
 								title="{CustomerID}"/>
 								<ObjectIdentifier
 								title="{CustomerName}"/>
-							<ObjectNumber
-								unit="{Address}"/>
+							<ObjectIdentifier
+								title="{Address}"/>
 						</cells>
 					</ColumnListItem>
 				</items>

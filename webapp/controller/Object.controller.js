@@ -148,7 +148,8 @@ sap.ui.define([
 					sEntityPath:"CustomerOrderDetails",
 					sPathOrderID: "OrderID",
 					sPathOrderDate : "OrderDate",
-					sPathOrderDetails : "OrderDetails"
+					sPathOrderDetails : ""
+					
 					
 				}
 			}).then(function (oUIComponent) {
